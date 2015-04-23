@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <link rel='stylesheet' href='/css/main2' type='text/css' media='screen' />
+    </head>
+    <body>
+        <p>{{ address }}</p>
+        {% if lista %}
+            <ul>
+                {% for i in lista %}
+                    <li><a href="agenda/{{ i.name }}">{{ i.name }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <p>{{ mensaje_out }}</p>
+        <a href="{{ link_out }}"> {{ name_out }} <a>
+    </body>
+</html>
